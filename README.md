@@ -16,7 +16,7 @@ Method: POST
 URL: /companies/
 ```
 
-Congrats! You just opened you account, and then we want to know a bit more about you. Just a few questions to answer before enjoying your iBanFirst account. 
+Congrats! You just opened an account with us, and then we want to know a bit more about you. Just a few questions to answer before enjoying your iBanFirst account. 
 
 **Parameters:**
 
