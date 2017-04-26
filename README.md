@@ -65,11 +65,7 @@ Congrats! You just opened an account with us, and then we want to know a bit mor
 * [Transaction Object](#transaction_object) 
 * [Amount Object](#amount_object) 
 * [Country Number Currency Object](#CountryNumberCurrency_object) 
-* [Address Object](#address_object)
-* [Account Object](#account_object)
-* [Phone Object](#phone_object)
-* [Individual Name Object](#individualName_object)
-* [Amount Object](#amount_object)
+* [Acquiring Channel List Object](#acquiringChanelList_object)
 
 ## Details ##
 
@@ -116,6 +112,13 @@ When an amount of currency is specified as part of a JSON body, it is encoded as
 	"currency": "GBP"
 }
 ```
+
+<hr />
+
+#### <a id="acquiringChanelList_object"></a> Acquiring Channel List Object ####
+
+TBD. List to be provided by Marketing.
+
 
 <hr />
 
