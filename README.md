@@ -31,7 +31,7 @@ Congrats! You just opened an account with us, and then we want to know a bit mor
 | outgoingVolume ([Transaction Object](../objects/objects.md#transaction_object)) | ([Amount Object](../objects/objects.md#amount_object) | Optional | The volume of transaction per year you expect to proceed in a specific currency. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
 | outgoingCountry ([Transaction Object](../objects/objects.md#transaction_object)) | ([CountryNumberCurrency Object](../objects/objects.md#amount_object) | Optional | The beneficiary country you expect to proceed transaction to in a specific currency in a year. And the number of transactions related. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
 | incomingVolume ([Transaction Object](../objects/objects.md#transaction_object)) | ([Amount Object](../objects/objects.md#amount_object) | Optional | The volume of transaction per year you expect to receive in a specific currency. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
-| incomingCountry ([Transaction Object](../objects/objects.md#transaction_object)) | ([CountryNumberCurrency Object](../objects/objects.md#amount_object) | Optional | The beneficiary country you expect to reveive transaction from in a specific currency in a year. And the number of transactions related. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
+| incomingCountry ([Transaction Object](../objects/objects.md#transaction_object)) | ([Country Number Currency Object](../objects/objects.md#countryNumberCurrency_object) | Optional | The beneficiary country you expect to reveive transaction from in a specific currency in a year. And the number of transactions related. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
 | acquiringChannel | ([Acquiring Channel List Object](../objects/objects.md#acquiringChanelList_object) | Required | The channel of acquisition you have used to create you account. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
 | trueData | Binary | Required | You confirm that the data sent in this form is true and accurate. |
 
@@ -64,7 +64,7 @@ Congrats! You just opened an account with us, and then we want to know a bit mor
 * [Reason Object](#reason_object) 
 * [Transaction Object](#transaction_object) 
 * [Amount Object](#amount_object) 
-* [Founders Object](#founder_object)
+* [Country Number Currency Object](#CountryNumberCurrency_object) 
 * [Address Object](#address_object)
 * [Account Object](#account_object)
 * [Phone Object](#phone_object)
@@ -77,17 +77,29 @@ Congrats! You just opened an account with us, and then we want to know a bit mor
 
 TBD. List to be provided by Product.
 
+
+<hr />
+
 #### <a id="reason_object"></a> Reason Object ####
 
 TBD. List to be provided by Product.
+
+
+<hr />
 
 #### <a id="transaction_object"></a> Transaction Object ####
 
 TBD. List to be provided by Product.
 
+
+<hr />
+
 #### <a id="amount_object"></a> Amount Object ####
 
 When an amount of currency is specified as part of a JSON body, it is encoded as an object with the following fields:
+
+
+<hr />
 
 **Object resources:**
 
@@ -107,7 +119,29 @@ When an amount of currency is specified as part of a JSON body, it is encoded as
 
 <hr />
 
+#### <a id="CountryNumberCurrency_object"></a> Country Number Currency Object ####
 
+When an amount of currency is specified as part of a JSON body, it is encoded as an object with the following fields:
+
+**Object resources:**
+
+| Field | Type | Description |
+|-------|------|-------------|
+| country | [Country](../conventions/formattingConventions.md#type_country) | The country of the counterparty of the transaction.|
+| currency | [Currency](../conventions/formattingConventions.md#type_currency) | The three-digit code specifying the currency related to the amount. |
+| number | [Quoted Decimal](../conventions/formattingConventions.md#type_quoteddecimal) | The number of transaction expected with this country.|
+
+**Example:**
+
+```js
+"amount": {
+	"country": "US",
+	"number": "10000.00",
+	"currency": "GBP"
+}
+```
+
+<hr />
 
 
 ## GETTING STARTED WITH IBANFIRST KYC API ##
