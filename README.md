@@ -22,12 +22,12 @@ Congrats! You just opened an account with us, and then we want to know a bit mor
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
-| activityCode | [NAF Code Object](../objects/objects.md#NAFCode_object) | Required | Your business activity as registered with local authorities. |
+| activityCode | String(5) | Required | Your business activity as registered with local authorities. To see a full list of state code, please refer to [this site](https://www.insee.fr/fr/information/2406147). |
 | activitydescription | String(500) | Required | A customised description of your activity. |
-| reason | [Reason Object](../objects/objects.md#reason_object) | Required | Why you want to open an account with us. |
+| reason | [Reason List](../conventions/formattingConventions.md#type_reasonList) | Required | Why you want to open an account with us. |
 | reasonDescription | String(500) | Optional | A customised description of your reason. This field is mandatory when you select the label "other" in the reason List. |
 | international ([Transaction Object](../objects/objects.md#transaction_object)) | Binary | Required | If you want to unlock the international module and allow to proceed cross-boarder transactions. |
-| consolidatedVolume ([Transaction Object](../objects/objects.md#transaction_object)) | [Amount Object](../objects/objects.md#amount_object) | Required | The consolidated volume of transaction per year you expect to proceed with us. |
+| consolidatedVolume ([Transaction Object](../objects/objects.md#transaction_object)) | [Amount Object](../objects/objects.md#amount_object) | Optional | The consolidated volume of transaction per year you expect to proceed with us. Required if the field international is true. |
 | outgoingVolume ([Transaction Object](../objects/objects.md#transaction_object)) | [Amount Object](../objects/objects.md#amount_object) | Optional | The volume of transaction per year you expect to proceed in a specific currency. |
 | outgoingCountry ([Transaction Object](../objects/objects.md#transaction_object)) | [CountryNumberCurrency Object](../objects/objects.md#amount_object) | Required | The beneficiary country you expect to proceed transaction to in a specific currency in a year. And the number of transactions related. |
 | incomingVolume ([Transaction Object](../objects/objects.md#transaction_object)) | [Amount Object](../objects/objects.md#amount_object) | Required | The volume of transaction per year you expect to receive in a specific currency. |
@@ -60,8 +60,7 @@ Congrats! You just opened an account with us, and then we want to know a bit mor
 
 # API Objects  
 
-* [NAF Code Object](#NAFCode_object) 
-* [Reason Object](#reason_object) 
+* [Reason List](#reason_list) 
 * [Transaction Object](#transaction_object) 
 * [Amount Object](#amount_object) 
 * [Country Number Currency Object](#CountryNumberCurrency_object) 
@@ -69,51 +68,25 @@ Congrats! You just opened an account with us, and then we want to know a bit mor
 
 ## Details ##
 
-#### <a id="NAFCode_object"></a> NAF Code Object ####
 
-NAF Code List of Level 1 minimum.
-Find here the full List of NAF Code : https://www.insee.fr/fr/information/2406147
+#### <a id="reason_list"></a> Reason List ####
 
-**Object resources:**
+We need to know WHY you are opening an account with us?
+The proposed Reason List is set-out as follow:
+
+**List resources:**
 
 | Code | Label |
 |-------|------------|
-|A|Agriculture, sylviculture et pêche|
-|B|Industries extractives|
-|C|	Industrie manufacturière|
-|D|	Production et distribution d'électricité, de gaz, de vapeur et d'air conditionné|
-|E|	Production et distribution d'eau ; assainissement, gestion des déchets et dépollution|
-|F|	Construction|
-|G|	Commerce ; réparation d'automobiles et de motocycles|
-|H|	Transports et entreposage|
-|I|	Hébergement et restauration|
-|J|	Information et communication|
-|K|	Activités financières et d'assurance|
-|L|	Activités immobilières|
-|M|	Activités spécialisées, scientifiques et techniques|
-|N|	Activités de services administratifs et de soutien|
-|O|	Administration publique|
-|P|	Enseignement|
-|Q|	Santé humaine et action sociale|
-|R|	Arts, spectacles et activités récréatives|
-|S|	Autres activités de services|
-|T|	Activités des ménages en tant qu'employeurs ; activités indifférenciées des ménages en tant que producteurs de biens et services pour usage propre|
-|U|	Activités extra-territoriales|
-
-
-<hr />
-
-#### <a id="reason_object"></a> Reason Object ####
-
-TBD. List to be provided by Product.
-
-
-<hr />
-
-#### <a id="transaction_object"></a> Transaction Object ####
-
-TBD. List to be provided by Product.
-
+| internationalTransfer | Interested in having the functionality of Cross-border wire transfer |
+| forexTrades | Interested in having the functionality of Foreign exchange trades |
+| sepaTransfer | Interested in having the functionality of Sepa Credit Transfer. |
+| managementInterface | Interested in having an online interface to management day-to-day banking transactions |
+| costBank | My bank is too expensive for me. |
+| reactivityBank | My bank is too slow for me. |
+| complexityBank | My bank is too complex for me. |
+| fintech | Interested in fintechs. |
+| other | Other. To describe. |
 
 <hr />
 
@@ -141,8 +114,20 @@ When an amount of currency is specified as part of a JSON body, it is encoded as
 
 #### <a id="acquiringChanelList_object"></a> Acquiring Channel List Object ####
 
-TBD. List to be provided by Marketing.
+We need to know by HOW you had known us?
+The proposed Acquiring Channel List is set-out as follow:
 
+**List resources:**
+
+| Code | Label |
+|-------|------------|
+| browser | By searching with my web browser. |
+| webAdvertising | By seing one of our comercials while browsing the web. |
+| webExternal | By seing one of our comercials in radio, TV or press. |
+| physicalDisplay | By seing one of our comercials physically displayed in the street. |
+| wordMouth | By a friend, collaborator or family. |
+| sponsorship | I have a coupon. |
+| other | Other. To describe. |
 
 <hr />
 
