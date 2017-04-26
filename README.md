@@ -29,7 +29,7 @@ Congrats! You just opened an account with us, and then we want to know a bit mor
 | international (Transaction Object) | Binary | Required | If you want to unlock the international module and allow to proceed cross-boarder transactions. |
 | consolidatedVolume (Transaction Object) | [Amount Object](../objects/objects.md#amount_object) | Optional | The consolidated volume of transaction per year you expect to proceed with us. Required if the field international is true. |
 | outgoingVolume (Transaction Object) | [Amount Object](../objects/objects.md#amount_object) | Optional | The volume of transaction per year you expect to proceed in a specific currency. |
-| outgoingCountry (Transaction Object) | [CountryNumberCurrency Object](../objects/objects.md#amount_object) | Required | The beneficiary country you expect to proceed transaction to in a specific currency in a year. And the number of transactions related. |
+| outgoingCountry (Transaction Object) | [Country Number Currency Object](../objects/objects.md#countryNumberCurrency_object) | Required | The beneficiary country you expect to proceed transaction to in a specific currency in a year. And the number of transactions related. |
 | incomingVolume (Transaction Object) | [Amount Object](../objects/objects.md#amount_object) | Required | The volume of transaction per year you expect to receive in a specific currency. |
 | incomingCountry (Transaction Object) | [Country Number Currency Object](../objects/objects.md#countryNumberCurrency_object) | Required | The beneficiary country you expect to reveive transaction from in a specific currency in a year. And the number of transactions related. |
 | acquiringChannel | string(200) | Required | The channel of acquisition you have used to create you account. To see the full list of acquiring channel, please refer to the [Acquiring Channel List](../conventions/formattingConventions.md#acquiringChanel_list) |
@@ -98,7 +98,7 @@ When an amount of currency is specified as part of a JSON body, it is encoded as
 |-------|------|-------------|
 | country | [Country](../conventions/formattingConventions.md#type_country) | The country of the counterparty of the transaction.|
 | currency | [Currency](../conventions/formattingConventions.md#type_currency) | The three-digit code specifying the currency related to the amount. |
-| number | [Quoted Decimal](../conventions/formattingConventions.md#type_quoteddecimal) | The number of transaction expected with this country.|
+| number | [Number](../conventions/formattingConventions.md#type_number) | The number of transactions expected with this country.|
 
 **Example:**
 
