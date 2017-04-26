@@ -9,7 +9,7 @@ API &amp; Webhook to automate the KYC process of iBanFirst
 
 <hr />
 
-## <a id="post_kycGettingStarted"></a> Submit the getting started KYC questionnaire. ##
+## <a id="post_kycGettingStarted"></a> Submit the Getting Started - KYC questionnaire. ##
 
 ```
 Method: POST 
@@ -33,11 +33,59 @@ Congrats! You just opened an account with us, and then we want to know a bit mor
 | incomingVolume ([Transaction Object](../objects/objects.md#transaction_object)) | ([Amount Object](../objects/objects.md#amount_object) | Optional | The volume of transaction per year you expect to receive in a specific currency. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
 | incomingCountry ([Transaction Object](../objects/objects.md#transaction_object)) | ([CountryNumberCurrency Object](../objects/objects.md#amount_object) | Optional | The beneficiary country you expect to reveive transaction from in a specific currency in a year. And the number of transactions related. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
 | acquiringChannel | ([Acquiring Channel List Object](../objects/objects.md#acquiringChanelList_object) | Required | The channel of acquisition you have used to create you account. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
-| acquiringChannel | ([Acquiring Channel List Object](../objects/objects.md#acquiringChanelList_object) | Required | The channel of acquisition you have used to create you account. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
+| trueData | Binary | Required | You confirm that the data sent in this form is true and accurate. |
+
+**Example:**
+```js
+{
+  "activityCode": "TBD",
+  "reason" : "other",
+  "reasonDescription": "fan du projet",
+  "international": true,
+  "transaction": {
+    "consolidatedVolume": {
+      "amount": {
+        "value": 1000.00,
+        "currency": "EUR",
+       }
+    }
+    "acquiringChannel": "browser",
+    "trueData": true,
+   }
+}
+```
 
 
+<hr />
 
+# API Objects  
 
+* [Companies Object](#companies_object)
+* [Company Creation Datas Object](#companyCreationDatas_object)
+* [Shareholder Object](#shareholder_object)
+* [Status Object](#status_object)
+* [Founders Object](#founder_object)
+* [Address Object](#address_object)
+* [Account Object](#account_object)
+* [Phone Object](#phone_object)
+* [Individual Name Object](#individualName_object)
+* [Amount Object](#amount_object)
+
+## Details ##
+
+#### <a id="companies_object"></a> Companies Object ####
+
+My object to follow where I am in the company creation process.
+
+**Object resources:**
+
+| Field | Type | Description |
+|-------|------|-------------|
+| id | [ID](#type_id) | The IF code identifying the company to be created. |
+| status | [status](#status_project) | The status of the company file. |
+| companyCreationDatas | [Company Creation Datas](#companyCreationDatas) | Specific data required for "attestation de dépôt du capital social" |
+| shareholdingStructures | Array<[Shareholder Object](#shareholder_object)> | The regulatory list of shareholders, part of the Ultimate Beneficiary Owners that must be identified as part as our Compliance procedure on the future company. |
+| account | [Account Object](#account_object) | The IBAN account that has been open for the purpose of creating the company. |
 
 
 
