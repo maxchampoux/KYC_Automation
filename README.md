@@ -13,7 +13,7 @@ API &amp; Webhook to automate the KYC process of iBanFirst
 
 ```
 Method: POST 
-URL: /companies/
+URL: /kyc/gettingStarted
 ```
 
 Congrats! You just opened an account with us, and then we want to know a bit more about you. Just a few questions to answer before enjoying your iBanFirst account. 
@@ -27,7 +27,13 @@ Congrats! You just opened an account with us, and then we want to know a bit mor
 | reason | [Reason Object](../objects/objects.md#reason_object) | Required | Why you want to open an account with us. |
 | reasonDescription | String(500) | Optional | A customised description of your reason. This field is mandatory when you select the label "other" in the reason List. |
 | international ([Transaction Object](../objects/objects.md#transaction_object)) | Binary | Required | If you want to unlock the international module and allow to proceed cross-boarder transactions. |
-| volume ([Transaction Object](../objects/objects.md#transaction_object)) | ([Amount Object](../objects/objects.md#amount_object) | Required | The volume of transaction per year you expect to proceed with us. |
+| consolidatedVolume ([Transaction Object](../objects/objects.md#transaction_object)) | ([Amount Object](../objects/objects.md#amount_object) | Required | The consolidated volume of transaction per year you expect to proceed with us. |
+| outgoingVolume ([Transaction Object](../objects/objects.md#transaction_object)) | ([Amount Object](../objects/objects.md#amount_object) | Optional | The volume of transaction per year you expect to proceed in a specific currency. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
+| outgoingCountry ([Transaction Object](../objects/objects.md#transaction_object)) | ([CountryNumberCurrency Object](../objects/objects.md#amount_object) | Optional | The beneficiary country you expect to proceed transaction to in a specific currency in a year. And the number of transactions related. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
+| incomingVolume ([Transaction Object](../objects/objects.md#transaction_object)) | ([Amount Object](../objects/objects.md#amount_object) | Optional | The volume of transaction per year you expect to receive in a specific currency. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
+| incomingCountry ([Transaction Object](../objects/objects.md#transaction_object)) | ([CountryNumberCurrency Object](../objects/objects.md#amount_object) | Optional | The beneficiary country you expect to reveive transaction from in a specific currency in a year. And the number of transactions related. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
+| acquiringChannel | ([Acquiring Channel List Object](../objects/objects.md#acquiringChanelList_object) | Required | The channel of acquisition you have used to create you account. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
+| acquiringChannel | ([Acquiring Channel List Object](../objects/objects.md#acquiringChanelList_object) | Required | The channel of acquisition you have used to create you account. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
 
 
 
