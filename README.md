@@ -27,12 +27,12 @@ Congrats! You just opened an account with us, and then we want to know a bit mor
 | reason | [Reason Object](../objects/objects.md#reason_object) | Required | Why you want to open an account with us. |
 | reasonDescription | String(500) | Optional | A customised description of your reason. This field is mandatory when you select the label "other" in the reason List. |
 | international ([Transaction Object](../objects/objects.md#transaction_object)) | Binary | Required | If you want to unlock the international module and allow to proceed cross-boarder transactions. |
-| consolidatedVolume ([Transaction Object](../objects/objects.md#transaction_object)) | ([Amount Object](../objects/objects.md#amount_object) | Required | The consolidated volume of transaction per year you expect to proceed with us. |
-| outgoingVolume ([Transaction Object](../objects/objects.md#transaction_object)) | ([Amount Object](../objects/objects.md#amount_object) | Optional | The volume of transaction per year you expect to proceed in a specific currency. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
-| outgoingCountry ([Transaction Object](../objects/objects.md#transaction_object)) | ([CountryNumberCurrency Object](../objects/objects.md#amount_object) | Optional | The beneficiary country you expect to proceed transaction to in a specific currency in a year. And the number of transactions related. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
-| incomingVolume ([Transaction Object](../objects/objects.md#transaction_object)) | ([Amount Object](../objects/objects.md#amount_object) | Optional | The volume of transaction per year you expect to receive in a specific currency. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
-| incomingCountry ([Transaction Object](../objects/objects.md#transaction_object)) | ([Country Number Currency Object](../objects/objects.md#countryNumberCurrency_object) | Optional | The beneficiary country you expect to reveive transaction from in a specific currency in a year. And the number of transactions related. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
-| acquiringChannel | ([Acquiring Channel List Object](../objects/objects.md#acquiringChanelList_object) | Required | The channel of acquisition you have used to create you account. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
+| consolidatedVolume ([Transaction Object](../objects/objects.md#transaction_object)) | [Amount Object](../objects/objects.md#amount_object) | Required | The consolidated volume of transaction per year you expect to proceed with us. |
+| outgoingVolume ([Transaction Object](../objects/objects.md#transaction_object)) | [Amount Object](../objects/objects.md#amount_object) | Optional | The volume of transaction per year you expect to proceed in a specific currency. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
+| outgoingCountry ([Transaction Object](../objects/objects.md#transaction_object)) | [CountryNumberCurrency Object](../objects/objects.md#amount_object) | Optional | The beneficiary country you expect to proceed transaction to in a specific currency in a year. And the number of transactions related. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
+| incomingVolume ([Transaction Object](../objects/objects.md#transaction_object)) | [Amount Object](../objects/objects.md#amount_object) | Optional | The volume of transaction per year you expect to receive in a specific currency. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
+| incomingCountry ([Transaction Object](../objects/objects.md#transaction_object)) | [Country Number Currency Object](../objects/objects.md#countryNumberCurrency_object) | Optional | The beneficiary country you expect to reveive transaction from in a specific currency in a year. And the number of transactions related. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
+| acquiringChannel | [Acquiring Channel List Object](../objects/objects.md#acquiringChanelList_object) | Required | The channel of acquisition you have used to create you account. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
 | trueData | Binary | Required | You confirm that the data sent in this form is true and accurate. |
 
 **Example:**
@@ -71,29 +71,33 @@ Congrats! You just opened an account with us, and then we want to know a bit mor
 
 #### <a id="NAFCode_object"></a> NAF Code Object ####
 
-Code	Libellé
-A	Agriculture, sylviculture et pêche
-B	Industries extractives
-C	Industrie manufacturière
-D	Production et distribution d'électricité, de gaz, de vapeur et d'air conditionné
-E	Production et distribution d'eau ; assainissement, gestion des déchets et dépollution
-F	Construction
-G	Commerce ; réparation d'automobiles et de motocycles
-H	Transports et entreposage
-I	Hébergement et restauration
-J	Information et communication
-K	Activités financières et d'assurance
-L	Activités immobilières
-M	Activités spécialisées, scientifiques et techniques
-N	Activités de services administratifs et de soutien
-O	Administration publique
-P	Enseignement
-Q	Santé humaine et action sociale
-R	Arts, spectacles et activités récréatives
-S	Autres activités de services
-T	Activités des ménages en tant qu'employeurs ; activités indifférenciées des ménages en tant que producteurs de biens et services pour usage propre
-U	Activités extra-territoriales
+NAF Code List of Level 1 minimum.
 
+**Object resources:**
+
+| Code | Label |
+|-------|------------|
+|A|Agriculture, sylviculture et pêche|
+|B|Industries extractives|
+|C|	Industrie manufacturière|
+|D|	Production et distribution d'électricité, de gaz, de vapeur et d'air conditionné|
+|E|	Production et distribution d'eau ; assainissement, gestion des déchets et dépollution|
+|F|	Construction|
+|G|	Commerce ; réparation d'automobiles et de motocycles|
+|H|	Transports et entreposage|
+|I|	Hébergement et restauration|
+|J|	Information et communication|
+|K|	Activités financières et d'assurance|
+|L|	Activités immobilières|
+|M|	Activités spécialisées, scientifiques et techniques|
+|N|	Activités de services administratifs et de soutien|
+|O|	Administration publique|
+|P|	Enseignement|
+|Q|	Santé humaine et action sociale|
+|R|	Arts, spectacles et activités récréatives|
+|S|	Autres activités de services|
+|T|	Activités des ménages en tant qu'employeurs ; activités indifférenciées des ménages en tant que producteurs de biens et services pour usage propre|
+|U|	Activités extra-territoriales|
 
 
 <hr />
@@ -115,9 +119,6 @@ TBD. List to be provided by Product.
 #### <a id="amount_object"></a> Amount Object ####
 
 When an amount of currency is specified as part of a JSON body, it is encoded as an object with the following fields:
-
-
-<hr />
 
 **Object resources:**
 
