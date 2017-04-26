@@ -23,16 +23,16 @@ Congrats! You just opened an account with us, and then we want to know a bit mor
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | activityCode | [NAF Code Object](../objects/objects.md#NAFCode_object) | Required | Your business activity as registered with local authorities. |
-| activitydescription | String(500) | Required | A customised description of your activity. This field is mandatory when you select the label "other" in the activityCode List. |
+| activitydescription | String(500) | Required | A customised description of your activity. |
 | reason | [Reason Object](../objects/objects.md#reason_object) | Required | Why you want to open an account with us. |
 | reasonDescription | String(500) | Optional | A customised description of your reason. This field is mandatory when you select the label "other" in the reason List. |
 | international ([Transaction Object](../objects/objects.md#transaction_object)) | Binary | Required | If you want to unlock the international module and allow to proceed cross-boarder transactions. |
 | consolidatedVolume ([Transaction Object](../objects/objects.md#transaction_object)) | [Amount Object](../objects/objects.md#amount_object) | Required | The consolidated volume of transaction per year you expect to proceed with us. |
-| outgoingVolume ([Transaction Object](../objects/objects.md#transaction_object)) | [Amount Object](../objects/objects.md#amount_object) | Optional | The volume of transaction per year you expect to proceed in a specific currency. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
-| outgoingCountry ([Transaction Object](../objects/objects.md#transaction_object)) | [CountryNumberCurrency Object](../objects/objects.md#amount_object) | Optional | The beneficiary country you expect to proceed transaction to in a specific currency in a year. And the number of transactions related. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
-| incomingVolume ([Transaction Object](../objects/objects.md#transaction_object)) | [Amount Object](../objects/objects.md#amount_object) | Optional | The volume of transaction per year you expect to receive in a specific currency. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
-| incomingCountry ([Transaction Object](../objects/objects.md#transaction_object)) | [Country Number Currency Object](../objects/objects.md#countryNumberCurrency_object) | Optional | The beneficiary country you expect to reveive transaction from in a specific currency in a year. And the number of transactions related. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
-| acquiringChannel | [Acquiring Channel List Object](../objects/objects.md#acquiringChanelList_object) | Required | The channel of acquisition you have used to create you account. This field is mandatory if you have an expected consilidate volume higher than EUR 100.000,00 |
+| outgoingVolume ([Transaction Object](../objects/objects.md#transaction_object)) | [Amount Object](../objects/objects.md#amount_object) | Optional | The volume of transaction per year you expect to proceed in a specific currency. |
+| outgoingCountry ([Transaction Object](../objects/objects.md#transaction_object)) | [CountryNumberCurrency Object](../objects/objects.md#amount_object) | Required | The beneficiary country you expect to proceed transaction to in a specific currency in a year. And the number of transactions related. |
+| incomingVolume ([Transaction Object](../objects/objects.md#transaction_object)) | [Amount Object](../objects/objects.md#amount_object) | Required | The volume of transaction per year you expect to receive in a specific currency. |
+| incomingCountry ([Transaction Object](../objects/objects.md#transaction_object)) | [Country Number Currency Object](../objects/objects.md#countryNumberCurrency_object) | Required | The beneficiary country you expect to reveive transaction from in a specific currency in a year. And the number of transactions related. |
+| acquiringChannel | [Acquiring Channel List Object](../objects/objects.md#acquiringChanelList_object) | Required | The channel of acquisition you have used to create you account. |
 | trueData | Binary | Required | You confirm that the data sent in this form is true and accurate. |
 
 **Example:**
@@ -72,6 +72,7 @@ Congrats! You just opened an account with us, and then we want to know a bit mor
 #### <a id="NAFCode_object"></a> NAF Code Object ####
 
 NAF Code List of Level 1 minimum.
+Find here the full List of NAF Code : https://www.insee.fr/fr/information/2406147
 
 **Object resources:**
 
