@@ -60,35 +60,10 @@ Congrats! You just opened an account with us, and then we want to know a bit mor
 
 # API Objects  
 
-* [Reason List](#reason_list) 
 * [Amount Object](#amount_object) 
 * [Country Number Currency Object](#CountryNumberCurrency_object) 
-* [Acquiring Channel List Object](#acquiringChanelList_object)
 
 ## Details ##
-
-
-#### <a id="reason_list"></a> Reason List ####
-
-We need to know WHY you are opening an account with us?
-The proposed Reason List is set-out as follow:
-
-**List resources:**
-
-| Code | Label |
-|-------|------------|
-| internationalTransfer | Interested in having the functionality of Cross-border wire transfer |
-| forexTrades | Interested in having the functionality of Foreign exchange trades |
-| sepaTransfer | Interested in having the functionality of Sepa Credit Transfer. |
-| managementInterface | Interested in having an online interface to management day-to-day banking transactions |
-| costBank | My bank is too expensive for me. |
-| reactivityBank | My bank is too slow for me. |
-| complexityBank | My bank is too complex for me. |
-| fintech | Interested in fintechs. |
-| other | Other. To describe. |
-
-<hr />
-
 
 #### <a id="amount_object"></a> Amount Object ####
 
@@ -112,24 +87,6 @@ When an amount of currency is specified as part of a JSON body, it is encoded as
 
 <hr />
 
-#### <a id="acquiringChanelList_object"></a> Acquiring Channel List Object ####
-
-We need to know by HOW you had known us?
-The proposed Acquiring Channel List is set-out as follow:
-
-**List resources:**
-
-| Code | Label |
-|-------|------------|
-| browser | By searching with my web browser. |
-| webAdvertising | By seing one of our comercials while browsing the web. |
-| webExternal | By seing one of our comercials in radio, TV or press. |
-| physicalDisplay | By seing one of our comercials physically displayed in the street. |
-| wordMouth | By a friend, collaborator or family. |
-| sponsorship | I have a coupon. |
-| other | Other. To describe. |
-
-<hr />
 
 #### <a id="CountryNumberCurrency_object"></a> Country Number Currency Object ####
 
@@ -155,3 +112,51 @@ When an amount of currency is specified as part of a JSON body, it is encoded as
 
 <hr />
 
+<hr />
+
+# API lists #  
+
+* [Reason List](#reason_list) 
+* [Acquiring Channel List Object](#acquiringChanelList_object)
+
+## Details ##
+
+#### <a id="reason_list"></a> Reason List ####
+
+We need to know WHY you are opening an account with us?
+The proposed Reason List is set-out as follow:
+
+**List resources:**
+
+| Code | Label |
+|-------|------------|
+| internationalTransfer | Interested in having the functionality of Cross-border wire transfer |
+| forexTrades | Interested in having the functionality of Foreign exchange trades |
+| sepaTransfer | Interested in having the functionality of Sepa Credit Transfer. |
+| managementInterface | Interested in having an online interface to management day-to-day banking transactions |
+| costBank | My bank is too expensive for me. |
+| reactivityBank | My bank is too slow for me. |
+| complexityBank | My bank is too complex for me. |
+| fintech | Interested in fintechs. |
+| other | Other. To describe. |
+
+<hr />
+
+#### <a id="acquiringChanelList_object"></a> Acquiring Channel List Object ####
+
+We need to know by HOW you had known us?
+The proposed Acquiring Channel List is set-out as follow:
+
+**List resources:**
+
+| Code | Label |
+|-------|------------|
+| browser | By searching with my web browser. |
+| webAdvertising | By seing one of our comercials while browsing the web. |
+| webExternal | By seing one of our comercials in radio, TV or press. |
+| physicalDisplay | By seing one of our comercials physically displayed in the street. |
+| wordMouth | By a friend, collaborator or family. |
+| sponsorship | I have a coupon. |
+| other | Other. To describe. |
+
+<hr />
