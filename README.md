@@ -60,10 +60,10 @@ Congrats! You just opened an account with us, and then we want to know a bit mor
 
 # API Objects  
 
-* [Companies Object](#companies_object)
-* [Company Creation Datas Object](#companyCreationDatas_object)
-* [Shareholder Object](#shareholder_object)
-* [Status Object](#status_object)
+* [NAF Code Object](#NAFCode_object) 
+* [Reason Object](#reason_object) 
+* [Transaction Object](#transaction_object) 
+* [Amount Object](#amount_object) 
 * [Founders Object](#founder_object)
 * [Address Object](#address_object)
 * [Account Object](#account_object)
@@ -73,20 +73,39 @@ Congrats! You just opened an account with us, and then we want to know a bit mor
 
 ## Details ##
 
-#### <a id="companies_object"></a> Companies Object ####
+#### <a id="NAFCode_object"></a> NAF Code Object ####
 
-My object to follow where I am in the company creation process.
+TBD. List to be provided by Product.
+
+#### <a id="reason_object"></a> Reason Object ####
+
+TBD. List to be provided by Product.
+
+#### <a id="transaction_object"></a> Transaction Object ####
+
+TBD. List to be provided by Product.
+
+#### <a id="amount_object"></a> Amount Object ####
+
+When an amount of currency is specified as part of a JSON body, it is encoded as an object with the following fields:
 
 **Object resources:**
 
 | Field | Type | Description |
 |-------|------|-------------|
-| id | [ID](#type_id) | The IF code identifying the company to be created. |
-| status | [status](#status_project) | The status of the company file. |
-| companyCreationDatas | [Company Creation Datas](#companyCreationDatas) | Specific data required for "attestation de dépôt du capital social" |
-| shareholdingStructures | Array<[Shareholder Object](#shareholder_object)> | The regulatory list of shareholders, part of the Ultimate Beneficiary Owners that must be identified as part as our Compliance procedure on the future company. |
-| account | [Account Object](#account_object) | The IBAN account that has been open for the purpose of creating the company. |
+| value  | [Quoted Decimal](../conventions/formattingConventions.md#type_quoteddecimal) | The quantity of the currency. |
+| currency | [Currency](../conventions/formattingConventions.md#type_currency) | The three-digit code specifying the currency related to the amount. |
 
+**Example:**
+
+```js
+"amount": {
+	"value": "10000.00",
+	"currency": "GBP"
+}
+```
+
+<hr />
 
 
 
