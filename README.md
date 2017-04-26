@@ -26,12 +26,12 @@ Congrats! You just opened an account with us, and then we want to know a bit mor
 | activitydescription | String(500) | Required | A customised description of your activity. |
 | reason | String(200)  | Required | Why you want to open an account with us. To see a full list of reasons, please refer to the [Reason List](../conventions/formattingConventions.md#type_reasonList) |
 | reasonDescription | String(500) | Optional | A customised description of your reason. This field is mandatory when you select the label "other" in the reason List. |
-| international ([Transaction Object](../objects/objects.md#transaction_object)) | Binary | Required | If you want to unlock the international module and allow to proceed cross-boarder transactions. |
-| consolidatedVolume ([Transaction Object](../objects/objects.md#transaction_object)) | [Amount Object](../objects/objects.md#amount_object) | Optional | The consolidated volume of transaction per year you expect to proceed with us. Required if the field international is true. |
-| outgoingVolume ([Transaction Object](../objects/objects.md#transaction_object)) | [Amount Object](../objects/objects.md#amount_object) | Optional | The volume of transaction per year you expect to proceed in a specific currency. |
-| outgoingCountry ([Transaction Object](../objects/objects.md#transaction_object)) | [CountryNumberCurrency Object](../objects/objects.md#amount_object) | Required | The beneficiary country you expect to proceed transaction to in a specific currency in a year. And the number of transactions related. |
-| incomingVolume ([Transaction Object](../objects/objects.md#transaction_object)) | [Amount Object](../objects/objects.md#amount_object) | Required | The volume of transaction per year you expect to receive in a specific currency. |
-| incomingCountry ([Transaction Object](../objects/objects.md#transaction_object)) | [Country Number Currency Object](../objects/objects.md#countryNumberCurrency_object) | Required | The beneficiary country you expect to reveive transaction from in a specific currency in a year. And the number of transactions related. |
+| international (Transaction Object) | Binary | Required | If you want to unlock the international module and allow to proceed cross-boarder transactions. |
+| consolidatedVolume (Transaction Object) | [Amount Object](../objects/objects.md#amount_object) | Optional | The consolidated volume of transaction per year you expect to proceed with us. Required if the field international is true. |
+| outgoingVolume (Transaction Object) | [Amount Object](../objects/objects.md#amount_object) | Optional | The volume of transaction per year you expect to proceed in a specific currency. |
+| outgoingCountry (Transaction Object) | [CountryNumberCurrency Object](../objects/objects.md#amount_object) | Required | The beneficiary country you expect to proceed transaction to in a specific currency in a year. And the number of transactions related. |
+| incomingVolume (Transaction Object) | [Amount Object](../objects/objects.md#amount_object) | Required | The volume of transaction per year you expect to receive in a specific currency. |
+| incomingCountry (Transaction Object) | [Country Number Currency Object](../objects/objects.md#countryNumberCurrency_object) | Required | The beneficiary country you expect to reveive transaction from in a specific currency in a year. And the number of transactions related. |
 | acquiringChannel | string(200) | Required | The channel of acquisition you have used to create you account. To see the full list of acquiring channel, please refer to the [Acquiring Channel List](../conventions/formattingConventions.md#acquiringChanel_list) |
 | trueData | Binary | Required | You confirm that the data sent in this form is true and accurate. |
 
@@ -61,7 +61,6 @@ Congrats! You just opened an account with us, and then we want to know a bit mor
 # API Objects  
 
 * [Reason List](#reason_list) 
-* [Transaction Object](#transaction_object) 
 * [Amount Object](#amount_object) 
 * [Country Number Currency Object](#CountryNumberCurrency_object) 
 * [Acquiring Channel List Object](#acquiringChanelList_object)
@@ -89,6 +88,7 @@ The proposed Reason List is set-out as follow:
 | other | Other. To describe. |
 
 <hr />
+
 
 #### <a id="amount_object"></a> Amount Object ####
 
