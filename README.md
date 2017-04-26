@@ -155,11 +155,3 @@ When an amount of currency is specified as part of a JSON body, it is encoded as
 
 <hr />
 
-
-## GETTING STARTED WITH IBANFIRST KYC API ##
-
-#### 1. Submit your Know Your Customer Report and Get started with you iBanFirst account ####
-
-Just a quick questionnaire before you have access to our services.
-
-[`POST /kyc/gettingStarted`](/services/kyc.md#post_kycGettingStarted)
