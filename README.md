@@ -25,6 +25,8 @@ Congrats! You just opened an account with us, and then we want to know a bit mor
 | activityCode | String(5) | Required | Your business activity as registered with local authorities. To see a full list of state code, please refer to [this site](https://www.insee.fr/fr/information/2406147). |
 | activitydescription | String(500) | Required | A customised description of your activity. |
 | reason | String(200)  | Required | Why you want to open an account with us. To see a full list of reasons, please refer to the [Reason List](../conventions/formattingConventions.md#type_reasonList) |
+| accountancyCurrency | [Currency](../conventions/formattingConventions.md#type_currency) | Required | The three-digit code specifying the accountancy currency of the client. |
+| currencyAccountsToOpen | Array<[Currency](../conventions/formattingConventions.md#type_currency)> | Required |  array of three-digit code specifying the currencies of account the client wants to open with us. |
 | reasonDescription | String(500) | Optional | A customised description of your reason. This field is mandatory when you select the label "other" in the reason List. |
 | international (Transaction Object) | Binary | Required | If you want to unlock the international module and allow to proceed cross-boarder transactions. |
 | consolidatedVolume (Transaction Object) | [Amount Object](../objects/objects.md#amount_object) | Optional | The consolidated volume of transaction per year you expect to proceed with us. Required if the field international is true. |
