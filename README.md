@@ -43,6 +43,8 @@ Congrats! You just opened an account with us, and then we want to know a bit mor
   "activityCode": "TBD",
   "reason" : "other",
   "reasonDescription": "fan du projet",
+  "accountancyCurrency" "EUR",
+  "currencyAccountsToOpen": "EUR",
   "international": true,
   "transaction": {
     "consolidatedVolume": {
