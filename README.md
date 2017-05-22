@@ -35,7 +35,7 @@ Congrats! You just opened an account with us, and then we want to know a bit mor
 | incomingVolume (Transaction Object) | [Amount Object](#amount_object) | Required | The volume of transaction per year you expect to receive in a specific currency. |
 | incomingCountry (Transaction Object) | [Country Number Currency Object](#countryNumberCurrency_object) | Required | The beneficiary country you expect to reveive transaction from in a specific currency in a year. And the number of transactions related. |
 | acquiringChannel | string(200) | Required | The channel of acquisition you have used to create you account. To see the full list of acquiring channel, please refer to the [Acquiring Channel List](#acquiringChanel_list) |
-| documentIdentityCheck | [Document Object]#type_document)> | Required | The type of document to reference with your company creation project |
+| documentIdentityCheck | [Document Object]#type_document) | Required | The type of document to reference with your company creation project |
 | trueData | Binary | Required | You confirm that the data sent in this form is true and accurate. |
 
 **Example:**
